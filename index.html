@@ -17,9 +17,196 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./images/hero-curry.svg" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="ロクパ rogspa トップへ">
+          <span class="brand-ja">ロクパ</span>
+          <span class="brand-en">rogspa</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="メインナビゲーション">
+          <a href="#concept">コンセプト</a>
+          <a href="#menu">メニュー</a>
+          <a href="#access">アクセス</a>
+        </nav>
+
+        <a class="button button-primary header-call" href="tel:09020143735">電話で予約</a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="メニューを開閉">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="mobile-nav" aria-label="モバイルナビゲーション">
+        <a href="#concept">コンセプト</a>
+        <a href="#menu">メニュー</a>
+        <a href="#access">アクセス</a>
+        <a class="button button-primary" href="tel:09020143735">電話で予約する</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="top" class="hero">
+        <div class="section-shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Mukonoso Spice Curry</p>
+            <h1>
+              ロクパ
+              <span>rogspa</span>
+            </h1>
+            <p class="hero-catch">
+              厳選スパイスが織りなす、<span>一皿で3つの味わい。</span>
+            </p>
+            <p class="hero-text">
+              豆カレー、花山椒カレー、そして日替わり。こだわりのスパイスカレーをワンプレートでご提供。
+              19時からは夜カレーと特製ビリヤニもご用意しております。
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="tel:09020143735">電話で予約する</a>
+              <a class="button button-secondary" href="#menu">メニューを見る</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal-delay">
+            <img src="./images/hero-curry.svg" alt="3種のカレーを盛り合わせたワンプレートのイメージ" />
+            <div class="hero-note">
+              <p>夜は特製ビリヤニ</p>
+              <span>当日予約は17:00まで。お電話で承ります。</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="concept" class="concept">
+        <div class="section-shell">
+          <div class="section-lead">
+            <div>
+              <p class="eyebrow">Concept</p>
+              <h2>ルーではなく、スパイスから考えるカレー。</h2>
+            </div>
+            <p>
+              ロクパは、日替わりのルーだけに頼るのではなく、スパイス自体を自ら厳選して一皿を組み立てるスパイスカレー店です。
+              ワンプレートには「豆」「花山椒」「日替わり」の3種のカレー。香り、辛み、旨みの重なりを少しずつ混ぜながら、
+              最後のひと口まで違う表情で楽しめます。
+            </p>
+          </div>
+
+          <div class="concept-cards">
+            <article>
+              <span class="icon-badge">豆</span>
+              <h3>豆カレー</h3>
+              <p>やさしい旨みを土台に、毎日食べたくなる穏やかな味わい。</p>
+            </article>
+            <article>
+              <span class="icon-badge">香</span>
+              <h3>花山椒カレー</h3>
+              <p>香りとしびれがふわりと広がる、ロクパらしい個性。</p>
+            </article>
+            <article>
+              <span class="icon-badge">日</span>
+              <h3>日替わり</h3>
+              <p>その日の素材とスパイスで仕立てる、出会いの一皿。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-shell">
+          <div class="menu-heading">
+            <p class="eyebrow">Menu</p>
+            <h2>昼はワンプレート、夜はビリヤニも。</h2>
+            <p>まずは3種のカレーを一皿で。夜の時間帯には、香り高い特製ビリヤニもご用意しています。</p>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card">
+              <img src="./images/curry-plate.svg" alt="昼のカレーワンプレートのイメージ" />
+              <div>
+                <h3>昼のメニュー</h3>
+                <p class="menu-time">11:30〜19:00</p>
+                <p>カレーのワンプレートのみ</p>
+              </div>
+            </article>
+            <article class="menu-card">
+              <img src="./images/biryani.svg" alt="夜の特製ビリヤニのイメージ" />
+              <div>
+                <h3>夜のメニュー</h3>
+                <p class="menu-time">19:00〜21:00</p>
+                <p>夜カレー ＆ 特製ビリヤニ</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="reservation-alert">
+            <div class="alert-mark">!</div>
+            <div>
+              <p>ビリヤニの当日ご予約の締め切りは17:00まで・お電話でのご注文になっております</p>
+              <a class="button button-primary" href="tel:09020143735">今すぐ電話で予約する</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="access" class="access">
+        <div class="section-shell access-grid">
+          <div>
+            <p class="eyebrow">Access</p>
+            <h2>店舗情報 / アクセス</h2>
+
+            <dl class="info-list">
+              <div><dt>店舗名</dt><dd>ロクパ rogspa</dd></div>
+              <div><dt>住所</dt><dd>〒661-0033 兵庫県尼崎市南武庫之荘1丁目5−15−102</dd></div>
+              <div><dt>アクセス</dt><dd>尼崎市 武庫之荘駅周辺</dd></div>
+              <div><dt>営業日</dt><dd>金〜水曜日</dd></div>
+              <div><dt>昼</dt><dd>11:30〜19:00</dd></div>
+              <div><dt>夜</dt><dd>19:00〜21:00</dd></div>
+              <div><dt>定休日</dt><dd>木曜日</dd></div>
+            </dl>
+
+            <div class="button-row access-links">
+              <a class="button button-primary" href="tel:09020143735">090-2014-3735</a>
+              <a class="button button-secondary" href="https://www.instagram.com/rogspa/?hl=ja" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="button button-secondary" href="https://www.facebook.com/rogspa" target="_blank" rel="noreferrer">Facebook</a>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="ロクパ rogspa Google Map"
+              src="https://www.google.com/maps?q=%E3%80%92661-0033%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%B0%BC%E5%B4%8E%E5%B8%82%E5%8D%97%E6%AD%A6%E5%BA%AB%E4%B9%8B%E8%8D%981%E4%B8%81%E7%9B%AE5%E2%88%9215%E2%88%92102&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">ロクパ rogspa</p>
+          <p>武庫之荘のスパイスカレー・ビリヤニ</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/rogspa/?hl=ja" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/rogspa" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed-call">
+      <a href="tel:09020143735">
+        <span>電話する</span>
+        <small>ビリヤニ予約は17:00まで</small>
+      </a>
+    </div>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
