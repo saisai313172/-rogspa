@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>ロクパ rogspa | 武庫之荘のスパイスカレー・ビリヤニ</title>
     <meta
       name="description"
@@ -15,16 +15,15 @@
       content="一皿で豆カレー、花山椒カレー、日替わりカレーを楽しめる、武庫之荘のスパイスカレー店。夜は特製ビリヤニも。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./images/hero-curry.svg" />
+    <meta property="og:image" content="./img/hero-curry.svg" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top" aria-label="ロクパ rogspa トップへ">
-          <span class="brand-ja">ロクパ</span>
-          <span class="brand-en">rogspa</span>
+          <img src="./img/ロゴ.jpg" alt="ロクパ" class="logo-image" />
         </a>
 
         <nav class="desktop-nav" aria-label="メインナビゲーション">
@@ -45,6 +44,8 @@
         <a href="#concept">コンセプト</a>
         <a href="#menu">メニュー</a>
         <a href="#access">アクセス</a>
+        <a href="https://www.instagram.com/rogspa/?hl=ja" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/rogspa" target="_blank" rel="noreferrer">Facebook</a>
         <a class="button button-primary" href="tel:09020143735">電話で予約する</a>
       </nav>
     </header>
@@ -72,7 +73,18 @@
           </div>
 
           <div class="hero-visual reveal reveal-delay">
-            <img src="./images/hero-curry.svg" alt="3種のカレーを盛り合わせたワンプレートのイメージ" />
+            <div class="hero-slider" aria-roledescription="carousel" aria-label="店舗ビジュアル">
+              <div class="slider-wrapper">
+                <img src="./img/HERO1.webp" alt="店舗外観" class="slide active" />
+                <img src="./img/HERO2.png" alt="店舗イメージ1" class="slide" />
+                <img src="./img/HERO3.png" alt="店舗イメージ2" class="slide" />
+              </div>
+              <div class="slider-dots">
+                <span class="dot active" data-index="0" aria-label="スライド 1"></span>
+                <span class="dot" data-index="1" aria-label="スライド 2"></span>
+                <span class="dot" data-index="2" aria-label="スライド 3"></span>
+              </div>
+            </div>
             <div class="hero-note">
               <p>夜は特製ビリヤニ</p>
               <span>当日予約は17:00まで。お電話で承ります。</span>
@@ -123,23 +135,38 @@
             <p>まずは3種のカレーを一皿で。夜の時間帯には、香り高い特製ビリヤニもご用意しています。</p>
           </div>
 
-          <div class="menu-grid">
-            <article class="menu-card">
-              <img src="./images/curry-plate.svg" alt="昼のカレーワンプレートのイメージ" />
-              <div>
-                <h3>昼のメニュー</h3>
-                <p class="menu-time">11:30〜19:00</p>
-                <p>カレーのワンプレートのみ</p>
+          <div class="menu-display">
+            <!-- 統合された写真スライダーエリア -->
+            <div class="menu-slider" aria-roledescription="carousel" aria-label="メニュービジュアル">
+              <div class="slider-wrapper">
+                <img src="./img/カレー1.png" alt="カレーメニュー1" class="slide active" />
+                <img src="./img/カレー2.png" alt="カレーメニュー2" class="slide" />
+                <img src="./img/カレー3.png" alt="カレーメニュー3" class="slide" />
+                <img src="./img/カレー4.png" alt="カレーメニュー4" class="slide" />
+                <img src="./img/カレー5.png" alt="カレーメニュー5" class="slide" />
               </div>
-            </article>
-            <article class="menu-card">
-              <img src="./images/biryani.svg" alt="夜の特製ビリヤニのイメージ" />
-              <div>
+              <div class="slider-dots">
+                <span class="dot active" data-index="0" aria-label="スライド 1"></span>
+                <span class="dot" data-index="1" aria-label="スライド 2"></span>
+                <span class="dot" data-index="2" aria-label="スライド 3"></span>
+                <span class="dot" data-index="3" aria-label="スライド 4"></span>
+                <span class="dot" data-index="4" aria-label="スライド 5"></span>
+              </div>
+            </div>
+
+            <!-- 下部のメニュー詳細テキスト情報 -->
+            <div class="menu-details">
+              <div class="menu-detail-col">
+                <h3>お昼のメニュー</h3>
+                <p class="menu-time">11:30〜19:00</p>
+                <p class="menu-desc">カレーのワンプレートのみ<br>（豆カレー、花山椒カレー、日替わりカレーの3種盛り）</p>
+              </div>
+              <div class="menu-detail-col">
                 <h3>夜のメニュー</h3>
                 <p class="menu-time">19:00〜21:00</p>
-                <p>夜カレー ＆ 特製ビリヤニ</p>
+                <p class="menu-desc">夜カレー ＆ 特製ビリヤニ<br>（スパイス香る炊き込みご飯「ビリヤニ」を夜限定で提供）</p>
               </div>
-            </article>
+            </div>
           </div>
 
           <div class="reservation-alert">
@@ -178,7 +205,7 @@
           <div class="map-frame">
             <iframe
               title="ロクパ rogspa Google Map"
-              src="https://www.google.com/maps?q=%E3%80%92661-0033%20%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%B0%BC%E5%B4%8E%E5%B8%82%E5%8D%97%E6%AD%A6%E5%BA%AB%E4%B9%8B%E8%8D%981%E4%B8%81%E7%9B%AE5%E2%88%9215%E2%88%92102&output=embed"
+              src="https://maps.google.com/maps?q=34.7492874,135.3959485+(%E3%83%AD%E3%82%AF%E3%83%91+rogspa)&z=17&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -189,9 +216,12 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <div>
+        <div class="footer-info">
           <p class="footer-brand">ロクパ rogspa</p>
-          <p>武庫之荘のスパイスカレー・ビリヤニ</p>
+          <p class="footer-tagline">武庫之荘のスパイスカレー・ビリヤニ</p>
+          <p class="footer-detail">〒661-0033 兵庫県尼崎市南武庫之荘1丁目5-15-102</p>
+          <p class="footer-detail">TEL: <a href="tel:09020143735" class="footer-tel">090-2014-3735</a></p>
+          <p class="footer-detail">営業時間: 昼 11:30〜19:00 / 夜 19:00〜21:00（木曜定休）</p>
         </div>
         <div class="footer-links">
           <a href="https://www.instagram.com/rogspa/?hl=ja" target="_blank" rel="noreferrer">Instagram</a>
@@ -207,6 +237,6 @@
       </a>
     </div>
 
-    <script type="module" src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

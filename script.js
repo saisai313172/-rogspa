@@ -23,3 +23,54 @@ document.addEventListener('keydown', (event) => {
     closeMobileMenu();
   }
 });
+
+// 汎用スライダー制御関数
+function initSlider(sliderSelector, intervalTime = 5000) {
+  const slider = document.querySelector(sliderSelector);
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.slide');
+  const dots = slider.querySelectorAll('.dot');
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    if (slides.length === 0) return;
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function startSlideShow() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  function resetSlideShow() {
+    clearInterval(slideInterval);
+    startSlideShow();
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      resetSlideShow();
+    });
+  });
+
+  if (slides.length > 0) {
+    startSlideShow();
+  }
+}
+
+// 各スライダーの初期化（5秒間隔）
+initSlider('.hero-slider', 5000);
+initSlider('.menu-slider', 5000);
+
